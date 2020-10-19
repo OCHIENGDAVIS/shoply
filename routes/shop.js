@@ -3,7 +3,7 @@ const express = require('express');
 const shopRouter = express.Router();
 
 shopRouter.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+  res.render('shop.ejs', { pageTitle: 'My Shop' });
 });
 
 module.exports = shopRouter;
